@@ -18,8 +18,8 @@ if (!function_exists('add_action')){
 }
 
 // Setup
-define('UP_PLUGIN_DIR', plugin_dir_path( __FILE__ ));
-define('UP_PLUGIN_FILE', __FILE__);
+define('UP_PLUGIN_DIR', plugin_dir_path( __FILE__ )); // Use plugin_dir_path() to get the directory path to the plugin folder
+define('UP_PLUGIN_FILE', __FILE__); // Use __FILE__ to get the full path to the plugin file
 
 // Includes
 //AFTER
@@ -74,13 +74,19 @@ add_filter('image_size_names_choose', 'up_custom_image_sizes');
 //for up_custom_image_sizes function in includes/setup.php
 
 add_filter('rest_recipe_query', 'up_rest_recipe_query', 10, 2);
+// for up_rest_recipe_query function in includes/rest-api.php
 
 add_action('admin_menu', 'up_admin_menus');
+// for up_admin_menus function in includes/admin/menus.php
 
 add_action('admin_post_up_save_options', 'up_save_options');
+// for up_save_options function in includes/admin/options.php
 
-add_action('admin_enqueue_scripts', 'up_admin_enqueue');
+add_action('admin_enqueue_scripts', 'up_admin_enqueue'); 
+// for up_admin_enqueue function in includes/admin/enqueue.php
 
-add_action('init', 'up_register_assets');
+add_action('init', 'up_register_assets'); 
+//for up_register_assets function in includes/admin/enqueue.php
 
-add_action('admin_init', 'up_settings_api');
+add_action('admin_init', 'up_settings_api'); 
+// for up_settings_api function in includes/admin/settings-api.php
