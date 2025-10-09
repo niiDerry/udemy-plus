@@ -1,0 +1,1 @@
+{"version":3,"file":"admin/index.css","mappings":";;;AAAA;EACE,cAAc;EACd,mBAAmB;EACnB,gBAAgB;AAClB,C","sources":["webpack://udemy-plus/./src/admin/main.css"],"sourcesContent":["#og-img-preview {\r\n  display: block;\r\n  margin-bottom: 20px;\r\n  min-width: 600px;\r\n}"],"names":[],"sourceRoot":""}

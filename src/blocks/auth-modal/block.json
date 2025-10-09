@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "udemy-plus/auth-modal",
+  "title": "Authentication Modal",
+  "category": "text",
+  "description": "Adds an authentication modal to your site.",
+  "version": "1",
+  "textdomain": "",
+  "attributes": {
+    "showRegister": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./index.css",
+  "viewScript": "file:./frontend.js"
+}
