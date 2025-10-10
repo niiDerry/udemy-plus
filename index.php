@@ -94,3 +94,5 @@ add_action('admin_init', 'up_settings_api');
 
 add_action( 'enqueue_block_editor_assets', 'up_enqueue_block_editor_assets' ); 
 // for up_enqueue_block_editor_assets function in includes/admin/editor-assets.php
+
+add_action('wp_head', 'up_wp_head'); // for up_wp_head function in includes/front/head.php
