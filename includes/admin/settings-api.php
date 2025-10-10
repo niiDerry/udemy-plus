@@ -1,14 +1,14 @@
 <?php 
 
 function up_settings_api() {
-  register_setting( 'up_options_group', 'up_options' );
+  register_setting( 'up_options_group', 'up_options' ); // Register the settings group
 
   add_settings_section( 
     'up_options_section',
     __('Udemy Plus Settings', 'udemy-plus'),
     'up_options_section_cb',
     'up_options_page'
-  );
+  ); // Add the settings section
 }
 
 function up_options_section_cb() {
