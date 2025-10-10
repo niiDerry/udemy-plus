@@ -40,6 +40,7 @@ foreach($allFiles as $filename){
 register_activation_hook( __FILE__, 'up_activate_plugin' ); 
 //for up_activate_plugin function in includes/activate.php
 
+//EXAMPLE* function($hook_name:string, $callback:callable, $priority:integer, $accepted_args:integer)
 add_action('init', 'up_register_blocks');
 //for up_register_blocks function in includes/register-blocks.php
 
@@ -86,7 +87,10 @@ add_action('admin_enqueue_scripts', 'up_admin_enqueue');
 // for up_admin_enqueue function in includes/admin/enqueue.php
 
 add_action('init', 'up_register_assets'); 
-//for up_register_assets function in includes/admin/enqueue.php
+//for up_register_assets function in includes/register-assets.php
 
 add_action('admin_init', 'up_settings_api'); 
 // for up_settings_api function in includes/admin/settings-api.php
+
+add_action( 'enqueue_block_editor_assets', 'up_enqueue_block_editor_assets' ); 
+// for up_enqueue_block_editor_assets function in includes/admin/editor-assets.php
