@@ -6,7 +6,7 @@ function up_plugins_options_alt_page() {
       <form method="POST" action="options.php">
         <?php 
           settings_fields('up_options_group');
-          do_settings_sections('up_options_page');
+          do_settings_sections('up-options-page');
           submit_button();
         ?>
       </form>
