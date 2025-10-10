@@ -31,6 +31,9 @@ __webpack_require__.r(__webpack_exports__);
     } = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useSelect)(select => {
       return select("core/editor").getEditedPostAttribute("meta");
     });
+    const {
+      editPost
+    } = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useDispatch)("core/editor");
     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_editor__WEBPACK_IMPORTED_MODULE_1__.PluginSidebar, {
       name: "up_sidebar",
       icon: "share",
@@ -40,16 +43,34 @@ __webpack_require__.r(__webpack_exports__);
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.TextControl, {
           label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("Title", "udemy-plus"),
           value: og_title,
-          onChange: og_title => {}
+          onChange: og_title => {
+            editPost({
+              meta: {
+                og_title
+              }
+            });
+          }
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.TextareaControl, {
           label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("Description", "udemy-plus"),
           value: og_description,
-          onChange: og_description => {}
+          onChange: og_description => {
+            editPost({
+              meta: {
+                og_description
+              }
+            });
+          }
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.ToggleControl, {
           label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("Override Featured Image", "udemy-plus"),
           checked: og_override_image,
           help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("By default, the featured image will be used as the image. Check this option to use a different image.", "udemy-plus"),
-          onChange: og_override_image => {}
+          onChange: og_override_image => {
+            editPost({
+              meta: {
+                og_override_image
+              }
+            });
+          }
         })]
       })
     });
