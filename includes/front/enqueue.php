@@ -11,6 +11,9 @@ function up_enqueue_scripts(){
     'udemy-plus-auth-modal-view-script',
     "const up_auth_rest = {$authURLs}",
     'before' // 'after
+  );
 
+  wp_enqueue_style(
+    'up_editor'
   );
 }
