@@ -96,3 +96,5 @@ add_action( 'enqueue_block_editor_assets', 'up_enqueue_block_editor_assets' );
 // for up_enqueue_block_editor_assets function in includes/admin/editor-assets.php
 
 add_action('wp_head', 'up_wp_head'); // for up_wp_head function in includes/front/head.php
+
+add_action('init', 'up_load_php_translations'); // for up_load_php_translations function in languages/udemy-plus.pot
